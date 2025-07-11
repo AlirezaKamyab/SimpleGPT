@@ -1,0 +1,39 @@
+{
+    "train_data": "./data/train-00000-of-00001-10a4de027237eace.parquet",
+    "tokenizer_path": "./data/tokenizer.json",
+    "text_column": "text",
+    "dataset_batch_size": 32,
+    "context_window": 256,
+
+    "batch_size": 16,
+    "num_workers": 4,
+    "pin_memory": true,
+    "prefetch_factor": 2,
+
+    "d_model": 512,
+    "num_heads": 8,
+    "num_layers": 12,
+    "ff_factor": 4,
+    "dropout": 0.1,
+    "max_len": 5000,
+
+    "label_smoothing": 0.0,
+    "learning_rate": 1e-4,
+    "warmup_steps": 4000,
+    "beta1": 0.9,
+    "beta2": 0.98,
+    "eps": 1e-9,
+
+    "checkpoint_path": "checkpoints",
+    "checkpoint_monitor": "train/loss",
+    "save_top": 3,
+    "mode": "min",
+    "every_n_train_steps": 1000,
+    "logger_path": ".",
+
+    "devices": [0],
+    "epochs": 5,
+    "precision": 16,
+    "accumulate_grad_batches": 8,
+    "ckpt_path": null
+}
